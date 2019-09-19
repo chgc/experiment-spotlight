@@ -77,6 +77,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "spotlight"
+    }
+  },
+  "defaultProject": "spotlight",
+  "cli": {
+    "analytics": false
+  }
 }

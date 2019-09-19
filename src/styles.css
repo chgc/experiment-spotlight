@@ -1,1 +1,100 @@
 /* You can add global styles to this file, and also import other style files */
+div,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+article,
+aside,
+figcaption,
+figure,
+nav,
+section,
+mark,
+audio,
+video,
+main {
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+figcaption,
+figure,
+nav,
+section,
+main {
+  display: block;
+}
+fieldset,
+img {
+  border: 0;
+}
+address,
+caption,
+cite,
+em,
+strong {
+  font-style: normal;
+  font-weight: 400;
+}
+ol,
+ul {
+  list-style: none;
+}
+caption {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: 400;
+}
+abbr {
+  border: 0;
+  font-variant: normal;
+}
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+body {
+  -webkit-text-size-adjust: none;
+}
+select,
+input,
+button,
+textarea {
+  font: 100% arial, helvetica, clean, sans-serif;
+}
+del {
+  font-style: normal;
+  text-decoration: none;
+}
+pre {
+  font-family: monospace;
+  line-height: 100%;
+}
+
+body {
+  height: 100vh;
+}

@@ -1,0 +1,75 @@
+:host {
+  --z-index: 1000;
+  --overlay: rgba(0, 0, 0, 0.75);
+}
+
+:host .msc-spotlight__ens {
+  --mask-timing-function: cubic-bezier(0.66, 0.6, 0.37, 1.36);
+
+  --duration-overlay: 150ms;
+  --duration-mask: 300ms;
+
+  --delay-overlay: var(--duration-mask);
+  --delay-mask: 0s;
+
+  --clip-path-start: circle(100vh at 50% 50%);
+  --clip-path-end: circle(100px at 50% 50%);
+}
+
+.stuff {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+:host {
+  all: initial;
+  font-family: sans-serif;
+  text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  z-index: var(--z-index);
+  pointer-events: none;
+}
+
+.msc-spotlight__ens {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--overlay);
+  transition: opacity var(--duration-overlay) ease var(--delay-overlay),
+    clip-path var(--duration-mask) var(--mask-timing-function) var(--delay-mask),
+    -webkit-clip-path var(--duration-mask) var(--mask-timing-function) var(--delay-mask);
+  opacity: 0;
+  clip-path: var(--clip-path-start);
+  -webkit-clip-path: var(--clip-path-start);
+}
+
+:host([active]) {
+  width: 100%;
+  height: 100%;
+}
+
+:host(.on) .msc-spotlight__ens {
+  opacity: 1;
+  --delay-overlay: 0s;
+  --delay-mask: var(--duration-overlay);
+  pointer-events: auto;
+}
+:host(.on) .overlay {
+  opacity: 1;
+  clip-path: var(--clip-path-end);
+  -webkit-clip-path: var(--clip-path-end);
+}
